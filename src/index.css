@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 213 60% 97%;
+    --foreground: 213 73% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 213 73% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 73% 20%;
+
+    --primary: 213 73% 20%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 207 95% 35%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 213 20% 92%;
+    --muted-foreground: 212 15% 48%;
+
+    --accent: 37 80% 52%;
+    --accent-foreground: 213 73% 20%;
+
+    --destructive: 4 64% 47%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 64% 29%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 33 100% 40%;
+    --warning-foreground: 0 0% 100%;
+
+    --info: 211 100% 95%;
+    --info-foreground: 207 95% 35%;
+
+    --border: 213 60% 90%;
+    --input: 207 95% 35%;
+    --ring: 213 100% 49%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 213 73% 20%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 37 80% 52%;
+    --sidebar-primary-foreground: 213 73% 20%;
+    --sidebar-accent: 213 60% 28%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 213 50% 30%;
+    --sidebar-ring: 37 80% 52%;
+    --sidebar-muted: 213 40% 35%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-heebo;
+    font-feature-settings: "kern";
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1 {
+    @apply text-[28px] font-extrabold leading-tight;
+  }
+  h2 {
+    @apply text-[22px] font-bold leading-snug;
+  }
+  h3 {
+    @apply text-[18px] font-bold leading-snug;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  right: 0;
+  z-index: 9999;
+  padding: 0.75rem 1.5rem;
+  background: hsl(213 73% 20%);
+  color: white;
+  font-weight: 600;
+  border-radius: 0 0 0 0.5rem;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 0;
+}
